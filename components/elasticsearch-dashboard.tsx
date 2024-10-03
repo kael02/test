@@ -97,7 +97,7 @@ export function ElasticsearchDashboardComponent() {
             <div className="space-y-2">
               <div className="flex justify-between items-center">
                 <span>Status:</span>
-                <Badge variant={clusterHealth.status === "green" ? "success" : "warning"}>
+                <Badge variant={clusterHealth.status === "green" ? "secondary" : "default"}>
                   {clusterHealth.status}
                 </Badge>
               </div>
@@ -201,7 +201,7 @@ export function ElasticsearchDashboardComponent() {
                 <TableRow key={index.name}>
                   <TableCell>{index.name}</TableCell>
                   <TableCell>
-                    <Badge variant={index.health === "green" ? "success" : "warning"}>
+                    <Badge variant={index.health === "green" ? "secondary" : "default"}>
                       {index.health}
                     </Badge>
                   </TableCell>
@@ -259,7 +259,7 @@ export function ElasticsearchDashboardComponent() {
                 <TableRow key={node.name}>
                   <TableCell>{node.name}</TableCell>
                   <TableCell>
-                    <Badge variant={node.status === "green" ? "success" : "warning"}>
+                    <Badge variant={node.status === "green" ? "secondary" : "default"}>
                       {node.status}
                     </Badge>
                   </TableCell>
